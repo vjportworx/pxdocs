@@ -11,7 +11,7 @@ Portworx has best practices for both global container level optimization, as wel
 
 As of PX version 1.3, it is recommended to use a journal device to absorb PX metadata writes. Journal writes are small with frequent syncs and therefore only SSD/NVME should be configured as a journal device.
 
-In 1.x, the journal device should be 2GB, and in 2.x it should be 3GB. Using a larger device will not help, since PX will only use these amounts of storage. The journal device can be specified via the -j option during installation, documented [here](/install-with-other/docker/standalone).
+In 1.x, the journal device should be 2GB, and in 2.x it should be 3GB. Using a larger device will not help, since PX will only use these amounts of storage. The journal device can be specified via the `-j` option during installation, documented [here](/install-with-other/docker/standalone).
 
 {{<info>}}
 **Note 1:**<br/>You **must** ensure that the journal device is faster than your storage device allocated for PX.  If the journal device is slower than the actual storage drive, your overall performance will be lower and match the lower of two devices.
